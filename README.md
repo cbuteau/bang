@@ -1,0 +1,2 @@
+# bang
+Extensible utility library
