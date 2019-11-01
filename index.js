@@ -81,6 +81,29 @@ var exposed = {
       var mod = require(current.amd);
       this[current.prop] = mod;
     }
+  },
+  _configNode: function(options) {
+
+  },
+  _configWeb: function(options) {
+    if (detectRequireJs()) {
+      this._configRequireJs(options);
+    } else {
+      for (var i = 0; i < options.modules.length; i++) {
+        var current = options.modules[i];
+        var mod = require(current.amd);
+        this[current.prop] = mod;
+      }
+    }
+  },
+  _configRequireJs: function(options) {
+    for (var i = 0; i < options.modules.length; i++) {
+      var current = options.modules[i];
+      var that = this;
+      require([current.amd], function(module) { //jshint ignore:line
+        that[current.prop] =  module;
+      });
+    }
   }
 };
 
