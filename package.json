@@ -1,0 +1,24 @@
+{
+  "name": "bang",
+  "version": "1.0.0",
+  "description": "A Extensible JS library.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "typecodes": "^1.2.0"
+  },
+  "scripts": {
+    "test": "node node_modules/jasmine/bin/jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbuteau/bang.git"
+  },
+  "author": "cbuteau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cbuteau/bang/issues"
+  },
+  "homepage": "https://github.com/cbuteau/bang#readme"
+}
